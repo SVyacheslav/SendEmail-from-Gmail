@@ -1,0 +1,70 @@
+﻿<Window x:Class="WpfApplication3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication3"
+        mc:Ignorable="d"
+        Title="SendMail" Height="350" Width="325">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock x:Name="ErrMsg" Grid.Row="0" Grid.Column="0"
+               Grid.ColumnSpan="2" TextWrapping="Wrap" Padding="5, 15" 
+               ></TextBlock>
+        
+        <Label Grid.Row="1" Grid.Column="0"
+               Grid.ColumnSpan="2" 
+               FontSize="24"
+               Content="Сервис отправки почты"></Label>
+
+        <Label Grid.Row="2" Grid.Column="0"
+               Content="Кому"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Center"></Label>
+
+        <TextBox x:Name="tbTo"
+                 Grid.Row="2" Grid.Column="1"
+                 Height="20"
+                 Width="150"></TextBox>
+        
+        <Label Grid.Row="3" Grid.Column="0"
+               Content="Тема"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Center"></Label>
+
+        <TextBox x:Name="tbSubject"
+                 Grid.Row="3" Grid.Column="1"
+                 Height="20"
+                 Width="150"></TextBox>
+
+        <Label Grid.Row="4" Grid.Column="0"
+               Content="Сообщение"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Center"></Label>
+
+        <TextBox x:Name="tbBody"
+                 Grid.Row="4" Grid.Column="1"
+                 Height="20"
+                 Width="150"></TextBox>
+
+        <Button Grid.Row="5" Grid.Column="1" Content="Отправить"
+                x:Name="SendMail"
+                Height="20"
+                Width="150"
+                Click="SendMail_Click"></Button>
+    </Grid>
+</Window>
